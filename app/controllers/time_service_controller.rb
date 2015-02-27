@@ -1,15 +1,16 @@
 class TimeServiceController < ApplicationController
 
-def index
-	t = Time.now
-	
-	h = t.strftime('%H').to_i
-	m = t.strftime('%M').to_i
-	
-	TimeService.create(hours: h , minutes: m)
+	def index
+		t = Time.now
+		
+		h = t.strftime('%D').to_i
+		m = t.strftime('%B').to_i
+		s = t.strftime('%Y').to_i
+		x = t.strftime('%x').to_i
 
-
-	@time = t.strftime('%H:%M')
-end
+		
+		#TimeService.create(hours: h , minutes: m)
+		@date = t.strftime('%x')
+	end
 
 end

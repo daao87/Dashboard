@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
  
-  resources :timeline
+  get 'dashboard/index'
+  
+  get '/timeline', to: 'timeline#index' 
 
   get '/timeservice', to: 'time_service#index' 
 
-  root 'timeline#index'
+  root 'dashboard#index'
 
-  
 end

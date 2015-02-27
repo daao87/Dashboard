@@ -1,1 +1,10 @@
-<%= @time %>
+
+<div class="time">
+	<p><%= @date %></p>
+	<hr>
+	<p id="reloj"></p>
+</div>
+
+<script>
+	setInterval(showClock, 1000);
+</script>

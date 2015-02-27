@@ -1,11 +1,11 @@
-<div class="container">
+<div class="container twitter">
 <div class="row">
-<%= form_tag timeline_index_path, method: :get, class: 'navbar-form pull-right' do %>
-	<%= text_field_tag :search, @search, placeholder: 'hashtag...', style: 'width: 200px' %>
-	<%= submit_tag "Search", class: 'btn btn-default' %>
+<%= form_tag timeline_path, method: :get, class: 'navbar-form pull-right' do %>
+	<%= text_field_tag :search, @search, placeholder: 'hashtag...', class:"form-control text-center" %>
+	<%= submit_tag "Search", class: 'btn btn-success' %>
 <% end %>
 
-<h2># Ruby</h2>
+
 </div>
 	<ul class="list-group">
 		<% @tweets.each do |tweet| %>
