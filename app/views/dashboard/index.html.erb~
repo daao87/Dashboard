@@ -7,7 +7,6 @@
 	
 <%= cell(:time_service, @date) %>
 
-<%= cell(:timeline, @tweets) %>
 
 	<a class="btn btn-primary" data-toggle="modal" href='#modal-id'>Add Widget</a>
 	<div class="modal fade" id="modal-id">

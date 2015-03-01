@@ -1,0 +1,14 @@
+<div class="container twitter">
+  <div class="row">
+    <%= form_tag timeline_path, method: :get, class: 'navbar-form pull-right'  %>
+	    <%= text_field_tag :search, @search, placeholder: 'hashtag...', class:"form-control text-center" %>
+	    <%= submit_tag "Search", class: 'btn btn-success' %>
+    
+  </div>
+
+	<ul class="list-group">
+		<% @tweets.each do |tweet| %>
+			<li class = "list-group-item"><span><%= tweet.user.screen_name %></span> | <%= tweet.text %>	</li>
+		<% end %>	
+	</ul>
+</div>
