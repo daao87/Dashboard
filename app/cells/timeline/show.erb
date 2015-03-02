@@ -1,14 +1,26 @@
-<div class="container twitter">
-  <div class="row">
-    <%= form_tag root_path, method: :get, class: 'navbar-form pull-right'  %>
+<div class="twitter">
+  <div class="row">    
+    <div class="col-sm-1">
+    </div>
+    <div class="col-sm-10">
+      <%= form_tag root_path, method: :get, class: 'navbar-form pull-right'  %>
 	    <%= text_field_tag :search, @search, placeholder: 'hashtag...', class:"form-control text-center" %>
 	    <%= submit_tag "Search", class: 'btn btn-success' %>
-    
+	  </div>
+    <div class="col-sm-1">
+    </div>
   </div>
-
-	<ul class="list-group">
-		<% @tweets.each do |tweet| %>
-			<li class = "list-group-item"><span><%= tweet.user.screen_name %></span> | <%= tweet.text %>	</li>
-		<% end %>	
-	</ul>
+  <div class="row">
+    <div class="col-sm-1">
+    </div>
+    <div class="col-sm-10">
+      <ul class="list-group">
+	      <% @tweets.each do |tweet| %>
+		      <li class = "list-group-item"><span><%= tweet.user.screen_name %></span> | <%= tweet.text %>	</li>
+	      <% end %>	
+      </ul>
+    </div>
+    <div class="col-sm-1">
+    </div>
+  </div>
 </div>

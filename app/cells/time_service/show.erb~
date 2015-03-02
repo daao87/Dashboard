@@ -1,7 +1,9 @@
-<h1>
-  TimeService#show
-</h1>
+<div class="time">
+	<p><%= @date %></p>
+	<p id="reloj"></p>
+</div>
 
-<p>
-  Find me in app/cells/time_service/show.erb
-</p>
+<script>
+  showClock();
+	setInterval(showClock, 1000);
+</script>

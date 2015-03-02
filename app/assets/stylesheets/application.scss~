@@ -37,9 +37,9 @@ h1{
 }
 
 .time-text {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .twitter{
