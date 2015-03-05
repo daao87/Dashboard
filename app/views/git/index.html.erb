@@ -1,0 +1,47 @@
+<div class="container">
+
+	<div class="row">
+		<div class="panel panel-default">
+		  <div class="panel-body">
+		  	<h1 class="text-center">Github Widget</h1>
+		  </div>
+	  	<div class="panel-footer">
+	  		<h4 class="text-center panel-danger"><%= @search %></h4>
+	  	</div>
+		</div>
+		
+		<%= form_tag git_index_path, method: :get, class: 'navbar-form pull-right' do %>
+			<%= text_field_tag :search, @search, placeholder: 'Github user...', class:'form-control' %>
+			<%= submit_tag "Search", class: 'btn btn-default' %>
+		<% end %>
+	</div>
+	<hr>
+	
+	<div class="row">
+		<div class="col-xs-6 col-lg-6">
+			<h4 class="breadcrumb">Repos & Stars</h4>
+				<ul class="list-group">
+					<% @repos.each do |repo| %>
+						<li class="list-group-item">
+							<h5><%= link_to repo.name, repo.html_url, target: "_blank" %></h5>
+							<span class="badge"><%= repo.watchers %></span>
+							<p><%= repo.description %></p>
+							<p><%= link_to "Clone", repo.clone_url, target: "_blank" %></p>
+						</li>
+					<% end %>
+				</ul>
+		</div>
+
+		<div class="row col-xs-6 col-lg-6">
+			<h4 class="breadcrumb"><%= @followers.count %> Followers</h4>
+			<% @followers.each do |follower| %>
+			  <%= link_to follower.html_url, target: "_blank" do %>
+				  <%= image_tag  (follower.avatar_url), class:"img-circle"%>
+				<% end %>
+			<% end %>
+		</div>
+	</div>
+</div>
+
+
+

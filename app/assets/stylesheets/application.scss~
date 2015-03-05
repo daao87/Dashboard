@@ -37,9 +37,9 @@ h1{
 }
 
 .time-text {
-  height: 100%;
-  display: table-cell;
-  vertical-align: middle;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .twitter{
@@ -50,3 +50,10 @@ h1{
 	overflow-x: hidden;
 	text-align: center;
 }
+.img-circle{
+ 	max-width: 50px;
+ 	max-height: 50px;
+ 	float: left;
+ 	height: auto;  
+ 	margin: 1%; 
+ }

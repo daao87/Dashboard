@@ -1,10 +1,5 @@
 Rails.application.routes.draw do
  
-  get 'dashboard/index', as: dashboard_path
-  
-  get '/timeline', to: 'timeline#index' 
-
-  get '/timeservice', to: 'time_service#index' 
 
   root 'dashboard#index'
 

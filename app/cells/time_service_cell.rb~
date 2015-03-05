@@ -1,5 +1,10 @@
-class TimeServiceCell < Cell::ViewModel
-  def show
+class TimeServiceCell < Cell::Rails
+
+  def show(args)
+    t = Time.now
+		
+		@date = t.strftime('%x')
+		
     render
   end
 

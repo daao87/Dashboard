@@ -1,0 +1,11 @@
+<div class="time">
+  <div class="time-text">
+	  <p><%= @date %></p>
+	  <p id="reloj"></p>
+	</div>
+</div>
+
+<script>
+  showClock();
+	setInterval(showClock, 1000);
+</script>

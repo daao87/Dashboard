@@ -42,4 +42,6 @@ gem 'bootstrap-sass'
 
 gem 'pry', group: [:development, :test]
 
-gem 'cells', "~> 4.0.0beta2"
+gem 'cells', "~> 4.0.0beta"
+
+gem 'github_api'

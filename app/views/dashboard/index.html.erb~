@@ -7,12 +7,14 @@
 
 <div class="row">
   <div class="col-sm-4">
-    <%= cell(:time_service, @date) %>
+    <%= cell :time_service, :show %>
   </div>
   <div class="col-sm-8">
     <%= cell(:timeline, @tweets) %>
   </div>
 </div>
+
+<%= cell(:github, @repos) %>
 
   <div class="row">
     <div class="col-sm-12">
@@ -37,7 +39,6 @@
 			      </div>
 		      </div>
 	      </div>
-      <hr>
     </div>
   </div>
 </div>
